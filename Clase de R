@@ -1,0 +1,12 @@
+##Descomposicion de Series de Tiempo
+tdesoc<-sample(3:8,60,replace = TRUE)
+tdesoc1<-ts(tdesoc,start = 2005,frequency = 12)
+tdesco_d<-decompose(tdesoc1,type = "additive",filter = )
+names(tdesco_d)
+plot(tdesco_d)
+plot(decompose(tdesco_d))
+trend<-tdesco_d$trend
+season<-tdesco_d$seasonal
+#Para realizar el tipo multiplicativo
+tdesco.dom<-decompose(tdesoc1,type="mult")
+tdesco.dom
